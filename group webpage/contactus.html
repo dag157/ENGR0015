@@ -1,0 +1,139 @@
+<!-- This is the webpage made by Dominick Gurnari. Created: Wed 4/8/17 Modified Last: 4/8/17 -->
+<html>
+    <head>
+        <!-- Title -->
+        <title>GurnariKissickEnterprises</title>
+        
+        <!-- Javascript for form validation -->
+        <script type="text/javascript">
+            
+            //main function here
+            function Validate() {
+                //retreive data
+                var vName = document.getElementById("input1n");
+                var vContact = document.getElementById("tarea");
+                var vPlanet = document.getElementById("planets");
+                var vVehicle = document.getElementById("vehicles");
+                var vAlliance = document.getElementsByName("rad");
+                var vServices = document.getElementsByName("pref");
+                var checks= "";
+                
+                //input the values
+                document.getElementById("valName").innerHTML = vName.value;
+                document.getElementById("valCon").innerHTML = vContact.value;
+                document.getElementById("valPla").innerHTML = vPlanet.value;
+                document.getElementById("valVeh").innerHTML = vVehicle.value;
+                
+                //for loops for the checklist and radio
+                
+                for (var i = 0; i < vAlliance.length; i++){
+                    if (vAlliance[i].checked == true){
+                        document.getElementById("valGal").innerHTML = vAlliance[i].id;
+                    }
+                }
+                
+                for (var i= 0; i < vServices.length; i++) {
+                    if (vServices[i].checked == true){
+                        checks = checks+vServices[i].id + " ";
+                    }
+                }
+                document.getElementById("valSer").innerHTML= checks;
+            }
+        </script>
+        
+    </head>
+    <!-- Body -->
+    <body bgcolor="gray">
+        
+        <!-- table for main data-->
+        <table width="100%" height="100%">
+            
+            <tr>
+                <td>
+                    <!-- Title -->
+                    
+                    <h2 align="center"><font color="blue">Contact Us</font></h2>
+                    
+                    <!-- Form -->
+                    
+                    <form action="mailto:dag157@pitt.edu" method="post" enctype="text/plain">
+                        
+                    <!-- Input your name -->
+                    
+                    Name:   <input type="text" name="input1" id="input1n" size="25" value="enter name here" /><br /><br />
+                        
+                    <!-- Text area of contact -->
+                    
+                    Your reason for contacting us:<br />
+                            <textarea rows="5" cols="50" name="tarea" id="tarea" wrap="hard">Enter your reason for contact here</textarea><br /><br />
+                            
+                    <!-- radio command -->
+                    
+                    Which is your galactic alliance?<br /><br />
+                    
+                    <input type="radio" name="rad" id="Galactic Empire" />Galactic Empire &nbsp;
+                    <input type="radio" name="rad" id="Rebel Alliance" />Rebel Alliance &nbsp;
+                    <input type="radio" name="rad" id="None" />Neither<br /><br />
+                    
+                    <!-- Checkbox here-->
+                    
+                    Preferred Services<br /><br />
+                    
+                    <input type="checkbox" name="pref" id="System Repair" checked />System Repair&nbsp;
+                    <input type="checkbox" name="pref" id="Engine Boost" />Engine Boost&nbsp;
+                    <input type="checkbox" name="pref" id="Power Swap" />Power Swap&nbsp;
+                    <input type="checkbox" name="pref" id="Service Droid" />Service Droid&nbsp;
+                    <input type="checkbox" name="pref" id="Parts Exchange" />Parts Exchange<br /><br />
+                      
+                    <!-- Select bars here -->
+                    
+                    Home planet&nbsp;&nbsp;
+                      
+                    <select id="planets">
+                        <option name="planet" value="Tatooine">Tatooine</option>
+                        <option name="planet" value="Naboo" selected>Naboo</option>
+                        <option name="planet" value="Kamino">Kamino</option>
+                        <option name="planet" value="Endor">Endor</option>
+                        <option name="planet" value="Outer Rim">Outer Rim</option>
+                    </select>&nbsp;&nbsp;
+                    
+                    Favorite Vehicle&nbsp;&nbsp;
+                    
+                    <select id="vehicles">
+                        <option name="vh" value="Tie Fighter">Tie Fighter</option>
+                        <option name="vh" value="Star Destroyer">Star Destroyer</option>
+                        <option name="vh" value="AT-AT">AT-AT</option>
+                        <option name="vh" value="SLAVE-1">SLAVE-1</option>
+                        <option name="vh" value="Speeder bike">Speeder bike</option>
+                    </select>
+                      
+                    <br /><br />
+                      
+                    <!-- Reset and submit buttons-->
+                      
+                    <input type="reset" name="reset" id="reset" value="Reset The Form" />&nbsp;&nbsp;&nbsp;
+                    <input type="submit" name="submit" id="submit" value="Submit The Form" /></br></br>
+                        
+                    </form>
+                    
+                    <!-- form validation -->
+                    
+                    <h4>Is your information correct?</h4>
+                    
+                    Name: <span id="valName">______</span><br />
+                    Reason for contact: <span id="valCon">______</span><br />
+                    Galactic Alliance: <span id="valGal">_____</span><br />
+                    Preferred Services: <span id="valSer">_____</span><br />
+                    Home Planet: <span id="valPla">_____</span><br />
+                    Favorite Vehicle: <span id="valVeh">_____</span><br /><br />
+                    
+                    <!-- Button that enters the validation fucntion -->
+                    <button id="sdata" name="sdata" onclick="Validate()">Click here to check validation</button
+                    
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+
