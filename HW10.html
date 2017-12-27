@@ -1,0 +1,48 @@
+<!-- This is the webpage made by Dominick Gurnari and Will Kissick. Created: Wed 4/5/17 -->
+<html>
+    <head>
+        <!-- title -->
+        <title>Temperature converter</title>
+        <!-- main script -->
+        <script type="text/javascript">
+            //
+            function cel1() {
+                //grab value from fahrenheit
+                var y = document.getElementById("degrees");
+                //return value in celsius
+                document.getElementById("calc").innerHTML = (y.value-32)*(5/9);
+            }
+            //
+            function far1() {
+                //grab value from celcius
+                var x = document.getElementById("degrees");
+                //return value in fahrenheit
+                document.getElementById("calc").innerHTML = (x.value*9/5)+(32);
+            }
+        </script>
+    </head>
+    <body bgcolor="yellow">
+        <br /><br /><br /><br />
+        <!-- title -->
+        <h2 align="center">Fahrenheit and Celsius converter</h2>
+        <br /><br /><br /><br /><br /><br />
+        <!-- main from probably not needed lol -->
+        <form action="mailto:dag157@pitt.edu" method="post" enctype="text/plain">
+            <center>
+                <!-- text input -->
+                <input type="text" id="degrees" name="input1" value="enter temperature here" size="50" /> &deg;
+                <br /><br /><br /><br />
+                <!-- both buttons to convert -->
+                <input type="button" value="Convert to Celsius" onclick="cel1()" />
+                <input type="button" value="Convert to Fahrenheit" onclick="far1()" />
+            </center>
+        </form>
+        <center>
+            <br /><br /><br /><br />
+            <!-- here is where the values are returned -->
+            Your result is: <span id="calc"></span>&deg;
+        </center>
+    </body>
+</html>
+
+

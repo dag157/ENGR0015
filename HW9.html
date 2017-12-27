@@ -1,0 +1,51 @@
+<!-- This is the webpage made by Dominick Gurnari. Created: Wed 3/8/17 Modified Last: Wed 3/15/17 -->
+<html>
+    <head>
+        <title>Coolest Rocks</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            //here is the code for the main text including the list
+            document.write("<h1>First Javascript Program</h1>");
+            document.write("<h2>This is the javaScript code for Group R06</h2><br />The group members are:");
+            document.write("<ul><li>Will Kissick</li><li>Dominick Gurnari</li></ul>");
+            document.write("The date is:");
+        </script>
+        <!-- Here is where the date is inputted-->
+        <p id="demo"></p>
+        <script>
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            </script>
+        <script>
+            //here are the first variables
+            var a=7;
+            var b=12;
+            var message1="\"I love college\"";
+            var message2="\"Playing College is Fun\"";
+            //here is the alert
+        alert("The first \\n puts the text on a new line, the double slash by the n is needed to allow the printing of the \\n in this printout. If you want to add a tab in the print out you insert \\t it will tab the text as shown here.\n\nSometimes it is nice to print out texto in \"double quotes\", this requires the double quote escape sequence \\\". Sometimes it is nice to print out text in \'single quotes\', this requires the single quote escape sequence \\'.\n\nFinally, notice all the single slashes \'\\' at the end of each line. These allow you to wrap the string to the next line for easy or reading.\n\nDo you understand\nthe code required to print this out?");
+        //here is the written out variables
+        document.write("The value for A is ",a);
+        document.write("<br />The value for B is ",b);
+        document.write("<br />The first message is ",message1);
+        document.write("<br />The second message is ",message2);
+        document.write("<br />The result for A + B = ",a+b);
+        document.write("<br />The result for message1 + message2 = ",message1+message2);
+        document.write("<br />The result for A + message1 = ",a+message1);
+        //here is the prompt to ask for both numbers
+        a = prompt("select a number A");
+        b = prompt("select a number B");
+        //this code below converts the prompt response into numbers
+        a = Number(a);
+        b = Number(b);
+        //this writes the values for each given number
+        document.write("<br />The new value for A = ",a);
+        document.write("<br />The new value for B = ",b);
+        document.write("<br />The result for A + B = ",a+b);
+        document.write("<br />The result for A * B = ",a*b);
+        </script>
+    </body>
+</html>
+
+
